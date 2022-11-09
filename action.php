@@ -18,7 +18,7 @@ if ($_GET['method'] == 'create') {
 
     $payment_url = "https://qiwi.com/payment/form/99?amountInteger={$amount}&amountFraction=0&currency=643&extra['comment']={$insert_id}&extra['account']=+998901606686";
 
-    echo json_encode(['id' => $insert_id, 'payment_url' => $payment_url]);
+    echo json_encode(['ok' => true, 'id' => $insert_id, 'payment_url' => $payment_url]);
 } elseif ($_GET['method'] == 'check') {
     $id = $_GET['id'];
     $qiwi = new Qiwi("998901606686", "f05b0c3b3c35a2b2e93db5527ab6286b");
