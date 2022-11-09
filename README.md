@@ -1,2 +1,1 @@
 # qiwi-integration
-# qiwi-integration
