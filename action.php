@@ -38,8 +38,7 @@ if ($_GET['method'] == 'create') {
         if ($value['comment'] == $id) {
             if ($value['sum']['amount'] == $info['amount']) {
                 $db->query("UPDATE `qiwi_log` SET `is_completed` = '1' WHERE `id` = '$id'");
-                $db->query("UPDATE `bot_users` SET `modeys` = `modeys` + '{$info['amount']}' WHERE `user_id` = '{$info['user_id']}'");
-                echo json_encode(['ok' => true, 'status' => 'success', 'amount' => $info['amount']]);
+                echo json_encode(['ok' => true, 'status' => 'success', 'amount' => $value['sum']['amount']]);
                 exit;
             } else {
                 echo json_encode(['ok' => false, 'status' => 'error']);
