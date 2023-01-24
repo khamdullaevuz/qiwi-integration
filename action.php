@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require 'Qiwi.php';
-$db = new mysqli('localhost', 'donative2_donative2', 'J911577769@k', 'donative2_donative2');
+$db = new mysqli('localhost', '', '', '');
 header('Content-Type: application/json');
 if ($_GET['method'] == 'create') {
     $amount = $_GET['amount'];
